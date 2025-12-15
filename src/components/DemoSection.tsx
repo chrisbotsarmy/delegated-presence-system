@@ -3,17 +3,17 @@ import { Button } from "@/components/ui/button";
 
 const DemoSection = () => {
   return (
-    <section id="demo" className="py-section px-6">
+    <section id="demo" className="py-section px-6 bg-secondary/30">
       <div className="max-w-wide mx-auto">
         {/* Section header */}
         <div className="max-w-content mx-auto text-center mb-12">
-          <h2 className="text-headline font-serif text-emphasis mb-4">
+          <h2 className="text-headline font-serif text-emphasis">
             This is what you get back
           </h2>
         </div>
 
         {/* Video placeholder */}
-        <div className="max-w-3xl mx-auto mb-8">
+        <div className="max-w-3xl mx-auto mb-10">
           <div className="relative aspect-video bg-foreground/5 border border-border rounded-lg overflow-hidden shadow-soft">
             {/* Placeholder content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -21,9 +21,7 @@ const DemoSection = () => {
               <button className="w-20 h-20 bg-primary/90 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-soft mb-4">
                 <Play className="w-8 h-8 text-primary-foreground ml-1" />
               </button>
-              <p className="text-caption text-subtle">
-                Demo video coming soon
-              </p>
+              <p className="text-caption text-subtle">Demo video coming soon</p>
             </div>
 
             {/* Decorative frame elements */}
@@ -35,8 +33,8 @@ const DemoSection = () => {
         </div>
 
         {/* Caption */}
-        <div className="max-w-content mx-auto text-center mb-12">
-          <p className="text-body text-subtle">
+        <div className="max-w-content mx-auto text-center mb-10">
+          <p className="text-body text-subtle leading-relaxed">
             Same tone. Same intent. Same person.
             <br />
             Generated automatically.
@@ -46,15 +44,9 @@ const DemoSection = () => {
         {/* CTA */}
         <div className="text-center">
           <Button variant="accent" size="lg" asChild>
-            <a href="mailto:ask.ch@regnau.lt">
-              Test it yourself
-            </a>
+            <a href="mailto:ask.ch@regnau.lt">Send me a question</a>
           </Button>
-          <p className="text-caption text-subtle mt-4">
-            Send a question to ask.ch@regnau.lt
-            <br />
-            and receive your video response.
-          </p>
+          <p className="text-caption text-subtle mt-4">ask.ch@regnau.lt</p>
         </div>
       </div>
     </section>

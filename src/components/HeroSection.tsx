@@ -48,7 +48,10 @@ const HeroSection = () => {
             {/* Email body */}
             <div className="px-6 py-5">
               <p className="text-body text-emphasis italic leading-relaxed">
-                "Can you explain vibe coding to my students?"
+                "Can you explain me how I can do a Digital Twin of myself?"
+              </p>
+              <p className="text-caption text-subtle mt-2">
+                Example of a real question I receive
               </p>
             </div>
           </div>

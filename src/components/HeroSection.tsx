@@ -12,8 +12,8 @@ const HeroSection = () => {
           <span className="text-[#A0522D]">but my digital twin can.</span>
         </h1>
         
-        {/* New sentence - bigger and bold with serif font */}
-        <p className="text-title font-bold font-serif text-emphasis max-w-lg mx-auto mb-8 leading-relaxed">
+        {/* New sentence - much bigger and bolder with serif font */}
+        <p className="text-3xl sm:text-4xl md:text-headline font-bold font-serif text-emphasis max-w-2xl mx-auto mb-8 leading-tight">
           And so when you reach out, I still answer.
         </p>
         

@@ -44,7 +44,7 @@ const DemoSection = () => {
         {/* CTA */}
         <div className="text-center">
           <Button variant="accent" size="lg" asChild>
-            <a href="mailto:ask.ch@regnau.lt">Send me a question</a>
+            <a href="mailto:ask.ch@regnau.lt" className="no-underline">Send me a question</a>
           </Button>
           <p className="text-caption text-subtle mt-4">ask.ch@regnau.lt</p>
         </div>

@@ -25,19 +25,21 @@ const Footer = () => {
         <div className="flex items-center justify-center gap-6">
           <a
             href="mailto:ask.ch@regnau.lt"
-            className="text-subtle hover:text-emphasis transition-colors duration-300"
             aria-label="Email"
           >
-            <Mail className="w-5 h-5" />
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center transition-colors duration-300 hover:bg-primary/20">
+              <Mail className="w-5 h-5 text-primary" />
+            </div>
           </a>
           <a
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-subtle hover:text-emphasis transition-colors duration-300"
             aria-label="LinkedIn"
           >
-            <Linkedin className="w-5 h-5" />
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center transition-colors duration-300 hover:bg-primary/20">
+              <Linkedin className="w-5 h-5 text-primary" />
+            </div>
           </a>
         </div>
 

@@ -61,7 +61,7 @@ const HeroSection = () => {
           className="text-caption text-subtle hover:text-emphasis transition-colors duration-300 flex items-center gap-2 mx-auto group"
         >
           See how it works
-          <span className="group-hover:translate-y-0.5 transition-transform duration-300"> ↓ </span>
+          <span className="group-hover:translate-y-0.5 transition-transform duration-300 text-[#A0522D]">↘</span>
         </button>
       </div>
     </section>

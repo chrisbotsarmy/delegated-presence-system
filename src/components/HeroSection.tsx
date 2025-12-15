@@ -9,7 +9,7 @@ const HeroSection = () => {
         {/* Main headline */}
         <h1 className="text-4xl sm:text-5xl md:text-display font-serif text-emphasis leading-tight mb-8">
           <span className="text-[#2D2D2D]">I can't be everywhere</span>,<br />
-          <span className="text-[#8C8C8C]">but my digital twin can.</span>
+          <span className="text-[#A0522D]">but my digital twin can.</span>
         </h1>
         
         {/* Subheadline */}

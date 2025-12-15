@@ -8,7 +8,7 @@ const AboutSection = () => {
         </h2>
 
         {/* Editorial text */}
-        <div className="space-y-6 text-body text-subtle leading-relaxed">
+        <div className="space-y-6 text-body text-subtle leading-relaxed text-center">
           <p>
             I needed a system that lets me scale my presence without sacrificing
             quality or authenticity.
@@ -25,7 +25,7 @@ const AboutSection = () => {
             systems, not just concepts.
           </p>
 
-          <p className="text-emphasis font-medium pt-4 text-center"> {/* Added text-center here */}
+          <p className="text-emphasis font-medium pt-4">
             Learning is not a phase.
             <br />
             It is the journey.

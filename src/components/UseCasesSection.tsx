@@ -60,7 +60,7 @@ const UseCasesSection = () => {
         {/* Footer text */}
         <div className="text-center">
           <p className="text-body text-subtle font-medium">
-            One system. Multiple surfaces.
+            One system. Multiple surfaces. by
           </p>
         </div>
       </div>

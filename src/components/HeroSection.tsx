@@ -12,10 +12,10 @@ const HeroSection = () => {
           <span className="text-[#A0522D]">but my digital twin can.</span>
         </h1>
         
-        {/* New sentence - much bigger and bolder with serif font */}
-        <p className="text-3xl sm:text-4xl md:text-headline font-bold font-serif text-emphasis max-w-2xl mx-auto mb-8 leading-tight">
+        {/* New sentence - same font styling as main headline */}
+        <h2 className="text-4xl sm:text-5xl md:text-display font-serif text-emphasis leading-tight mb-8">
           And so when you reach out, I still answer.
-        </p>
+        </h2>
         
         {/* Subheadline */}
         <p className="text-body text-subtle max-w-lg mx-auto mb-16 leading-relaxed">

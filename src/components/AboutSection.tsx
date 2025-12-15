@@ -25,7 +25,7 @@ const AboutSection = () => {
             systems, not just concepts.
           </p>
 
-          <p className="text-emphasis font-medium pt-4">
+          <p className="text-emphasis font-medium pt-4 text-center"> {/* Added text-center here */}
             Learning is not a phase.
             <br />
             It is the journey.

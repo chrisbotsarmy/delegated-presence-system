@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-wide mx-auto">
         {/* Built with */}
         <div className="text-center mb-8">
-          <p className="text-caption text-subtle font-mono">
+          <p className="text-caption text-subtle">
             Built with: Make.com · OpenAI · ElevenLabs · HeyGen · Office 365
           </p>
         </div>

@@ -8,17 +8,14 @@ const HeroSection = () => {
       <div className="max-w-content mx-auto text-center">
         {/* Main headline */}
         <h1 className="text-4xl sm:text-5xl md:text-display font-serif text-emphasis leading-tight mb-8">
-          I can't be everywhere.
-          <br />
-          But when you reach out, I still answer.
+          <span className="text-[#2D2D2D]">I can't be everywhere</span>,<br />
+          <span className="text-[#8C8C8C]">but my digital twin can.</span>
         </h1>
-
+        
         {/* Subheadline */}
         <p className="text-body text-subtle max-w-lg mx-auto mb-16 leading-relaxed">
-          Not instantly.
-          <br />
-          Thoughtfully.
-          <br />
+          Not instantly. <br />
+          Thoughtfully. <br />
           In my voice.
         </p>
 
@@ -34,9 +31,7 @@ const HeroSection = () => {
                 </p>
                 <p>
                   <span className="text-subtle">To:</span>{" "}
-                  <span className="text-emphasis font-medium">
-                    ask.ch@regnau.lt
-                  </span>
+                  <span className="text-emphasis font-medium"> ask.ch@regnau.lt </span>
                 </p>
                 <p>
                   <span className="text-subtle">Subject:</span>{" "}
@@ -44,28 +39,24 @@ const HeroSection = () => {
                 </p>
               </div>
             </div>
-
+            
             {/* Email body */}
             <div className="px-6 py-5">
               <p className="text-body text-emphasis italic leading-relaxed">
                 "Can you explain me how I can do a Digital Twin of myself?"
               </p>
-              <p className="text-caption text-subtle mt-2">
-                Example of a real question I receive
-              </p>
+              <p className="text-caption text-subtle mt-2"> Example of a real question I receive </p>
             </div>
           </div>
         </div>
 
         {/* CTA */}
-        <button
+        <button 
           onClick={scrollToContext}
           className="text-caption text-subtle hover:text-emphasis transition-colors duration-300 flex items-center gap-2 mx-auto group"
         >
           See how it works
-          <span className="group-hover:translate-y-0.5 transition-transform duration-300">
-            ↓
-          </span>
+          <span className="group-hover:translate-y-0.5 transition-transform duration-300"> ↓ </span>
         </button>
       </div>
     </section>

@@ -18,7 +18,7 @@ const Footer = () => {
 
         {/* Signature */}
         <div className="text-center mb-8">
-          <p className="text-body text-emphasis font-serif mb-1">
+          <p className="text-body text-emphasis font-serif mb-2">
             Christophe Regnault
           </p>
           <p className="text-caption text-subtle">

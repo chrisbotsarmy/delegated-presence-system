@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 const HeroSection = () => {
   const scrollToContext = () => {
     document.getElementById("context")?.scrollIntoView({ behavior: "smooth" });
@@ -25,7 +27,7 @@ const HeroSection = () => {
         </p>
 
         {/* Email mockup */}
-        <div className="max-w-md mx-auto mb-16">
+        <div className="max-w-md mx-auto mb-8">
           <div className="bg-card border border-border rounded-lg shadow-card overflow-hidden text-left">
             {/* Email header */}
             <div className="px-6 py-4 border-b border-border bg-secondary/30">
@@ -55,7 +57,21 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* CTA */}
+        {/* Second CTA */}
+        <div className="mb-16">
+          <Button 
+            size="lg" 
+            className="bg-[#A0522D] hover:bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-medium mb-4"
+            asChild
+          >
+            <a href="mailto:ask.ch@regnau.lt" className="no-underline">
+              Send me a question
+            </a>
+          </Button>
+          <p className="text-body text-subtle">ask.ch@regnau.lt</p>
+        </div>
+
+        {/* Original CTA */}
         <button 
           onClick={scrollToContext}
           className="text-caption text-subtle hover:text-emphasis transition-colors duration-300 flex items-center gap-2 mx-auto group"

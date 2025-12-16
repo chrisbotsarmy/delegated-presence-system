@@ -17,8 +17,8 @@ const HeroSection = () => {
           And so when you reach out, I still answer.
         </h2>
         
-        {/* Subheadline */}
-        <p className="text-body text-subtle max-w-lg mx-auto mb-16 leading-relaxed">
+        {/* Subheadline - made bigger to be consistent */}
+        <p className="text-2xl sm:text-3xl md:text-headline font-serif text-subtle max-w-lg mx-auto mb-16 leading-relaxed">
           Not instantly. <br />
           Thoughtfully. <br />
           In my voice.

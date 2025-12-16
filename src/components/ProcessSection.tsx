@@ -44,21 +44,30 @@ const ProcessSection = () => {
         {/* Timeline */}
         <div className="max-w-xl mx-auto">
           <div className="relative">
-            {/* Vertical line from first Mail icon to last Send icon */}
-            <div className="absolute left-6 top-6 w-px bg-border" style={{ height: `${(steps.length - 1) * 8 * 4}px` }} />
+            {/* Vertical line connecting through center of all icons */}
+            <div 
+              className="absolute w-px bg-border" 
+              style={{ 
+                left: '24px', // Center of 48px icon (w-12 = 48px, so center is 24px)
+                top: '24px', // Start from center of first icon
+                height: `calc(100% - 48px)` // Go to center of last icon
+              }} 
+            />
 
             {/* Steps */}
-            <div className="space-y-8">
+            <div className="space-y-12">
               {steps.map((step, index) => (
-                <div key={index} className="relative flex items-start gap-6">
+                <div key={index} className="relative flex items-center gap-6">
                   {/* Icon */}
-                  <div className="relative z-10 w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center shadow-card flex-shrink-0">
+                  <div className="relative z-10 w-12 h-12 bg-background border border-border rounded-full flex items-center justify-center shadow-card flex-shrink-0">
                     <step.icon className="w-5 h-5 text-primary" />
                   </div>
 
                   {/* Content */}
-                  <div className="pt-3">
-                    <p className="text-body text-emphasis">{step.title}</p>
+                  <div>
+                    <p className="text-body text-emphasis leading-relaxed">
+                      {step.title}
+                    </p>
                   </div>
                 </div>
               ))}

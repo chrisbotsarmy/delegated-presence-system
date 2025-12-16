@@ -44,8 +44,8 @@ const ProcessSection = () => {
         {/* Timeline */}
         <div className="max-w-xl mx-auto">
           <div className="relative">
-            {/* Vertical line from brain icon (second step) to send icon (last step) */}
-            <div className="absolute left-6 w-px bg-border" style={{ top: `${1 * 8 * 4 + 24}px`, height: `${(steps.length - 2) * 8 * 4}px` }} />
+            {/* Continuous vertical line from first to last icon */}
+            <div className="absolute left-6 top-6 w-px bg-border" style={{ height: `${(steps.length - 1) * 8 * 4}px` }} />
 
             {/* Steps */}
             <div className="space-y-8">

@@ -9,6 +9,7 @@ const Footer = () => {
           <p className="text-caption text-subtle">
             Tech & AI stack:
             <br />
+            <br />
             OpenAI · Claude · Make.com · ElevenLabs · HeyGen ·
             <br />
             Lovable · Google AI Studio · Dayd · Vercel

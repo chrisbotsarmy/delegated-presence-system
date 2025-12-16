@@ -4,10 +4,14 @@ const Footer = () => {
   return (
     <footer className="py-12 px-6 border-t border-border">
       <div className="max-w-wide mx-auto">
-        {/* Built with */}
+        {/* Tech stack */}
         <div className="text-center mb-8">
           <p className="text-caption text-subtle">
-            Built with: Make.com · OpenAI · ElevenLabs · HeyGen
+            Tech & AI stack:
+            <br />
+            OpenAI · Claude · Make.com · ElevenLabs · HeyGen ·
+            <br />
+            Lovable · Google AI Studio · Dayd · Vercel
           </p>
         </div>
 

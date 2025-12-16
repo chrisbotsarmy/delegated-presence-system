@@ -44,15 +44,13 @@ const ProcessSection = () => {
         {/* Timeline */}
         <div className="max-w-xl mx-auto">
           <div className="relative">
+            {/* Continuous vertical line from first to last icon */}
+            <div className="absolute left-6 top-6 w-px bg-border" style={{ height: `${(steps.length - 1) * 8 * 4}px` }} />
+
             {/* Steps */}
             <div className="space-y-8">
               {steps.map((step, index) => (
                 <div key={index} className="relative flex items-start gap-6">
-                  {/* Vertical line segment - skip after first step */}
-                  {index > 0 && (
-                    <div className="absolute left-6 -top-8 h-8 w-px bg-border" />
-                  )}
-                  
                   {/* Icon */}
                   <div className="relative z-10 w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center shadow-card flex-shrink-0">
                     <step.icon className="w-5 h-5 text-primary" />

@@ -44,8 +44,8 @@ const ProcessSection = () => {
         {/* Timeline */}
         <div className="max-w-xl mx-auto">
           <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-6 top-0 bottom-0 w-px bg-border" />
+            {/* Vertical line - hidden on mobile */}
+            <div className="absolute left-6 top-0 bottom-0 w-px bg-border hidden md:block" />
 
             {/* Steps */}
             <div className="space-y-8">

@@ -44,7 +44,7 @@ const ProcessSection = () => {
         {/* Timeline */}
         <div className="max-w-xl mx-auto">
           <div className="relative">
-            {/* Continuous vertical line from first to last icon */}
+            {/* Vertical line from first Mail icon to last Send icon */}
             <div className="absolute left-6 top-6 w-px bg-border" style={{ height: `${(steps.length - 1) * 8 * 4}px` }} />
 
             {/* Steps */}

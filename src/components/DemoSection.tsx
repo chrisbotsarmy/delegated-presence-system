@@ -18,8 +18,8 @@ const DemoSection = () => {
             {/* Placeholder content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               {/* Play button */}
-              <button className="w-20 h-20 bg-primary/90 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-soft mb-4">
-                <Play className="w-8 h-8 text-primary-foreground ml-1" />
+              <button className="w-20 h-20 bg-[#A0522D] hover:bg-[#8B4513] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-soft mb-4">
+                <Play className="w-8 h-8 text-white ml-1" />
               </button>
               <p className="text-caption text-subtle">Demo video coming soon</p>
             </div>
@@ -43,7 +43,11 @@ const DemoSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button variant="accent" size="lg" asChild>
+          <Button 
+            size="lg" 
+            className="bg-[#A0522D] hover:bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-medium"
+            asChild
+          >
             <a href="mailto:ask.ch@regnau.lt" className="no-underline">Send me a question</a>
           </Button>
           <p className="text-caption text-subtle mt-4">ask.ch@regnau.lt</p>

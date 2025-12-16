@@ -17,7 +17,7 @@ const Footer = () => {
             Christophe Regnault
           </p>
           <p className="text-caption text-subtle">
-            Builder · Marketer · Teacher · Experimenter
+            Senior Marketing & Communication Strategist · Teacher · Lifelong Learner
           </p>
         </div>
 

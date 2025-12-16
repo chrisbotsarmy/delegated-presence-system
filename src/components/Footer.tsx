@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Tech stack */}
         <div className="text-center mb-8">
           <p className="text-caption text-subtle">
-            Tech & AI stack:
+            <span className="font-bold">Tech & AI stack:</span>
             <br />
             <br />
             OpenAI · Claude · Make.com · ElevenLabs · HeyGen ·

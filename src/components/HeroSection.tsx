@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import ContactForm from "@/components/ContactForm";
 
 const HeroSection = () => {
   const scrollToContext = () => {
@@ -26,49 +27,23 @@ const HeroSection = () => {
           In my voice.
         </p>
 
-        {/* Email mockup */}
-        <div className="max-w-md mx-auto mb-8">
-          <div className="bg-card border border-border rounded-lg shadow-card overflow-hidden text-left">
-            {/* Email header */}
-            <div className="px-6 py-4 border-b border-border bg-secondary/30">
-              <div className="space-y-1 text-caption">
-                <p>
-                  <span className="text-subtle">From:</span>{" "}
-                  <span className="text-emphasis">You</span>
-                </p>
-                <p>
-                  <span className="text-subtle">To:</span>{" "}
-                  <span className="text-emphasis font-medium">ask.christophe@regnau.lt</span>
-                </p>
-                <p>
-                  <span className="text-subtle">Subject:</span>{" "}
-                  <span className="text-emphasis">Quick question</span>
-                </p>
-              </div>
-            </div>
-            
-            {/* Email body */}
-            <div className="px-6 py-5">
-              <p className="text-body text-emphasis italic leading-relaxed">
-                "Can you explain me how I can do a Digital Twin of myself?"
-              </p>
-              <p className="text-caption text-subtle mt-2">Example of a real question I receive</p>
-            </div>
-          </div>
+        {/* Interactive Contact Form */}
+        <div className="mb-8">
+          <ContactForm />
         </div>
 
-        {/* Second CTA */}
+        {/* Alternative CTA */}
         <div className="mb-16">
+          <p className="text-body text-subtle mb-4">Or send directly to:</p>
           <Button 
             size="lg" 
             className="bg-[#A0522D] hover:bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-medium mb-4"
             asChild
           >
             <a href="mailto:ask.christophe@regnau.lt" className="no-underline">
-              Send me a question
+              ask.christophe@regnau.lt
             </a>
           </Button>
-          <p className="text-body text-subtle">ask.christophe@regnau.lt</p>
         </div>
 
         {/* Original CTA */}

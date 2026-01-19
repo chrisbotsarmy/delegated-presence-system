@@ -10,6 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Send, Loader2, CheckCircle } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const contactSchema = z.object({
   from: z.string().email("Please enter a valid email address"),
@@ -41,17 +42,28 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Create mailto link
-      const mailtoLink = `mailto:ask.christophe@regnau.lt?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`From: ${data.from}\n\nMessage:\n${data.message}`)}`;
-      
-      // Open email client
-      window.location.href = mailtoLink;
+      // EmailJS configuration - you'll need to replace these with your actual values
+      const serviceId = 'YOUR_SERVICE_ID';
+      const templateId = 'YOUR_TEMPLATE_ID';
+      const publicKey = 'YOUR_PUBLIC_KEY';
+
+      // Template parameters for EmailJS
+      const templateParams = {
+        from_email: data.from,
+        to_email: 'ask.christophe@regnau.lt',
+        subject: data.subject,
+        message: data.message,
+        from_name: data.from.split('@')[0], // Extract name from email
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
       
       // Show success state
       setIsSubmitted(true);
       
       // Show success toast
-      toast.success("✅ Message sent! You should receive a video response within 10-15 minutes.", {
+      toast.success("✅ Message sent successfully! You should receive a video response within 10-15 minutes.", {
         duration: 5000,
       });
       
@@ -62,8 +74,8 @@ const ContactForm = () => {
       }, 3000);
       
     } catch (error) {
-      toast.error("Something went wrong. Please try again.");
-      console.error("Form submission error:", error);
+      console.error('EmailJS error:', error);
+      toast.error("Failed to send message. Please try again or email directly to ask.christophe@regnau.lt");
     } finally {
       setIsSubmitting(false);
     }
@@ -76,7 +88,7 @@ const ContactForm = () => {
           <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
           <h3 className="text-title font-serif text-emphasis mb-2">Message Sent!</h3>
           <p className="text-body text-subtle">
-            You should receive a personalized video response within 10-15 minutes.
+            Your message has been delivered to Christophe. You should receive a personalized video response within 10-15 minutes.
           </p>
         </div>
       </div>

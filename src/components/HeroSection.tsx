@@ -8,11 +8,6 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-content mx-auto text-center">
-        {/* TESTING - BIG VISIBLE CHANGE */}
-        <div className="bg-red-500 text-white p-8 mb-8 text-2xl font-bold">
-          🚨 TESTING - IF YOU SEE THIS RED BOX, CHANGES ARE WORKING! 🚨
-        </div>
-        
         {/* Main headline */}
         <h1 className="text-4xl sm:text-5xl md:text-display font-serif text-emphasis leading-tight mb-8">
           <span className="text-[#2D2D2D]">I can't be everywhere</span>,<br />
@@ -43,7 +38,7 @@ const HeroSection = () => {
                 </p>
                 <p>
                   <span className="text-subtle">To:</span>{" "}
-                  <span className="text-emphasis font-medium"> ask.ch@regnau.lt </span>
+                  <span className="text-emphasis font-medium">ask.ch@regnau.lt</span>
                 </p>
                 <p>
                   <span className="text-subtle">Subject:</span>{" "}
@@ -57,7 +52,7 @@ const HeroSection = () => {
               <p className="text-body text-emphasis italic leading-relaxed">
                 "Can you explain me how I can do a Digital Twin of myself?"
               </p>
-              <p className="text-caption text-subtle mt-2"> Example of a real question I receive </p>
+              <p className="text-caption text-subtle mt-2">Example of a real question I receive</p>
             </div>
           </div>
         </div>

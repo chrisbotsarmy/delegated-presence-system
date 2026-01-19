@@ -3,7 +3,7 @@ import { Mail, Brain, Mic, Video, Cloud, Send } from "lucide-react";
 const steps = [
   {
     icon: Mail,
-    title: "Email arrives at : ask.ch@regnau.lt",
+    title: "Email arrives at : ask.christophe@regnau.lt",
   },
   {
     icon: Brain,

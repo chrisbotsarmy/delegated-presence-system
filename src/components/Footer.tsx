@@ -29,7 +29,7 @@ const Footer = () => {
         {/* Social links */}
         <div className="flex items-center justify-center gap-6">
           <a
-            href="mailto:ask.ch@regnau.lt"
+            href="mailto:ask.christophe@regnau.lt"
             aria-label="Email"
           >
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center transition-colors duration-300 hover:bg-primary/20">

@@ -48,9 +48,9 @@ const DemoSection = () => {
             className="bg-[#A0522D] hover:bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-medium"
             asChild
           >
-            <a href="mailto:ask.ch@regnau.lt" className="no-underline">Send me a question</a>
+            <a href="mailto:ask.christophe@regnau.lt" className="no-underline">Send me a question</a>
           </Button>
-          <p className="text-caption text-subtle mt-4">ask.ch@regnau.lt</p>
+          <p className="text-caption text-subtle mt-4">ask.christophe@regnau.lt</p>
         </div>
       </div>
     </section>

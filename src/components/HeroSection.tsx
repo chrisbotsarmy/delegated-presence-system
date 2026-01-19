@@ -38,7 +38,7 @@ const HeroSection = () => {
                 </p>
                 <p>
                   <span className="text-subtle">To:</span>{" "}
-                  <span className="text-emphasis font-medium">ask.ch@regnau.lt</span>
+                  <span className="text-emphasis font-medium">ask.christophe@regnau.lt</span>
                 </p>
                 <p>
                   <span className="text-subtle">Subject:</span>{" "}
@@ -64,11 +64,11 @@ const HeroSection = () => {
             className="bg-[#A0522D] hover:bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-medium mb-4"
             asChild
           >
-            <a href="mailto:ask.ch@regnau.lt" className="no-underline">
+            <a href="mailto:ask.christophe@regnau.lt" className="no-underline">
               Send me a question
             </a>
           </Button>
-          <p className="text-body text-subtle">ask.ch@regnau.lt</p>
+          <p className="text-body text-subtle">ask.christophe@regnau.lt</p>
         </div>
 
         {/* Original CTA */}

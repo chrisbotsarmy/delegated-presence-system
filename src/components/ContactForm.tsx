@@ -10,7 +10,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Send, Loader2, CheckCircle } from "lucide-react";
-import emailjs from '@emailjs/browser';
 
 const contactSchema = z.object({
   from: z.string().email("Please enter a valid email address"),
@@ -42,39 +41,41 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // EmailJS configuration - you'll need to replace these with your actual values
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
-
-      // Template parameters for EmailJS
-      const templateParams = {
-        from_email: data.from,
-        to_email: 'ask.christophe@regnau.lt',
-        subject: data.subject,
-        message: data.message,
-        from_name: data.from.split('@')[0], // Extract name from email
-      };
-
-      // Send email using EmailJS
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
-      // Show success state
-      setIsSubmitted(true);
-      
-      // Show success toast
-      toast.success("✅ Message sent successfully! You should receive a video response within 10-15 minutes.", {
-        duration: 5000,
+      // Simulate sending (for now, we'll use Formspree which is easier to set up)
+      const response = await fetch('https://formspree.io/f/xdkogkvo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: data.from,
+          subject: data.subject,
+          message: data.message,
+          _replyto: data.from,
+          _subject: `Digital Twin Question: ${data.subject}`,
+        }),
       });
-      
-      // Reset form after a delay
-      setTimeout(() => {
-        reset();
-        setIsSubmitted(false);
-      }, 3000);
+
+      if (response.ok) {
+        // Show success state
+        setIsSubmitted(true);
+        
+        // Show success toast
+        toast.success("✅ Message sent successfully! You should receive a video response within 10-15 minutes.", {
+          duration: 5000,
+        });
+        
+        // Reset form after a delay
+        setTimeout(() => {
+          reset();
+          setIsSubmitted(false);
+        }, 3000);
+      } else {
+        throw new Error('Failed to send message');
+      }
       
     } catch (error) {
-      console.error('EmailJS error:', error);
+      console.error('Form submission error:', error);
       toast.error("Failed to send message. Please try again or email directly to ask.christophe@regnau.lt");
     } finally {
       setIsSubmitting(false);

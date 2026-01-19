@@ -28,22 +28,8 @@ const HeroSection = () => {
         </p>
 
         {/* Interactive Contact Form */}
-        <div className="mb-8">
-          <ContactForm />
-        </div>
-
-        {/* Alternative CTA */}
         <div className="mb-16">
-          <p className="text-body text-subtle mb-4">Or send directly to:</p>
-          <Button 
-            size="lg" 
-            className="bg-[#A0522D] hover:bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-medium mb-4"
-            asChild
-          >
-            <a href="mailto:ask.christophe@regnau.lt" className="no-underline">
-              ask.christophe@regnau.lt
-            </a>
-          </Button>
+          <ContactForm />
         </div>
 
         {/* Original CTA */}

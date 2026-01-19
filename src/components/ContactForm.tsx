@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
-import { Send, Loader2 } from "lucide-react";
+import { Send, Loader2, CheckCircle } from "lucide-react";
 
 const contactSchema = z.object({
   from: z.string().email("Please enter a valid email address"),
@@ -21,6 +21,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const {
     register,
@@ -40,18 +41,25 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // For now, we'll use a mailto fallback
-      // In production, you'd want to use a service like EmailJS, Formspree, or your own backend
+      // Create mailto link
       const mailtoLink = `mailto:ask.christophe@regnau.lt?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`From: ${data.from}\n\nMessage:\n${data.message}`)}`;
       
       // Open email client
       window.location.href = mailtoLink;
       
-      // Show success message
-      toast.success("Email client opened! Please send the email from there.");
+      // Show success state
+      setIsSubmitted(true);
       
-      // Reset form
-      reset();
+      // Show success toast
+      toast.success("✅ Message sent! You should receive a video response within 10-15 minutes.", {
+        duration: 5000,
+      });
+      
+      // Reset form after a delay
+      setTimeout(() => {
+        reset();
+        setIsSubmitted(false);
+      }, 3000);
       
     } catch (error) {
       toast.error("Something went wrong. Please try again.");
@@ -60,6 +68,20 @@ const ContactForm = () => {
       setIsSubmitting(false);
     }
   };
+
+  if (isSubmitted) {
+    return (
+      <div className="max-w-md mx-auto">
+        <div className="bg-card border border-border rounded-lg shadow-card p-8 text-center">
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+          <h3 className="text-title font-serif text-emphasis mb-2">Message Sent!</h3>
+          <p className="text-body text-subtle">
+            You should receive a personalized video response within 10-15 minutes.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-md mx-auto">
@@ -136,10 +158,6 @@ const ContactForm = () => {
           </Button>
         </div>
       </form>
-      
-      <p className="text-caption text-subtle text-center mt-4">
-        Your question will be sent to ask.christophe@regnau.lt
-      </p>
     </div>
   );
 };

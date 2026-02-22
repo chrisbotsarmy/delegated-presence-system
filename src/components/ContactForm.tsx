@@ -41,8 +41,7 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Simulate sending (for now, we'll use Formspree which is easier to set up)
-      const response = await fetch('https://formspree.io/f/xdkogkvo', {
+      const response = await fetch('https://formspree.io/f/xojnkbja', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

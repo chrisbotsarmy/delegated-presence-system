@@ -52,6 +52,7 @@ const ContactForm = () => {
           message: data.message,
           _replyto: data.from,
           _subject: `Digital Twin Question: ${data.subject}`,
+          _to: 'ch@regnau.lt',
         }),
       });
 
@@ -75,7 +76,7 @@ const ContactForm = () => {
       
     } catch (error) {
       console.error('Form submission error:', error);
-      toast.error("Failed to send message. Please try again or email directly to ask.christophe@regnau.lt");
+      toast.error("Failed to send message. Please try again or email directly to ch@regnau.lt");
     } finally {
       setIsSubmitting(false);
     }
@@ -117,7 +118,7 @@ const ContactForm = () => {
             
             <div>
               <Label className="text-caption text-subtle">To:</Label>
-              <p className="text-caption text-emphasis font-medium mt-1">ask.christophe@regnau.lt</p>
+              <p className="text-caption text-emphasis font-medium mt-1">ch@regnau.lt</p>
             </div>
             
             <div>

@@ -2,6 +2,11 @@ import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const DemoSection = () => {
+  const scrollToContactForm = () => {
+    // Scroll to the top of the page where the contact form is located
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <section id="demo" className="py-section px-6 bg-secondary/30">
       <div className="max-w-wide mx-auto">
@@ -46,9 +51,9 @@ const DemoSection = () => {
           <Button 
             size="lg" 
             className="bg-[#A0522D] hover:bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-medium"
-            asChild
+            onClick={scrollToContactForm}
           >
-            <a href="mailto:ask.christophe@regnau.lt" className="no-underline">Send me a question</a>
+            Send me a question
           </Button>
           <p className="text-caption text-subtle mt-4">ask.christophe@regnau.lt</p>
         </div>

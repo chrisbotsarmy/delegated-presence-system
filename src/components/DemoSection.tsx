@@ -55,7 +55,6 @@ const DemoSection = () => {
           >
             Send me a question
           </Button>
-          <p className="text-caption text-subtle mt-4">ask.christophe@regnau.lt</p>
         </div>
       </div>
     </section>

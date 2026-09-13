@@ -10,7 +10,7 @@ const Footer = () => {
             <span className="font-bold">Tech & AI stack:</span>
             <br />
             <br />
-            OpenAI · Claude · Make.com · ElevenLabs · HeyGen ·
+            Chat GPT (OpenAI) · Claude (Anthropic) · n8n · ElevenLabs · HeyGen ·
             <br />
             Lovable · Google AI Studio · Dayd · Vercel
           </p>
@@ -19,7 +19,7 @@ const Footer = () => {
         {/* Signature */}
         <div className="text-center mb-12">
           <p className="text-body text-emphasis font-serif mb-2">
-            Christophe Regnault
+            Christophe REGNAULT
           </p>
           <p className="text-caption text-subtle">
             Senior Marketing & Communication Strategist · Teacher · Lifelong Learner
@@ -51,7 +51,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center mt-8">
           <p className="text-caption text-subtle/60">
-            © 2025 Christophe Regnault
+            © 2025-2026 - Christophe REGNAULT
           </p>
         </div>
       </div>

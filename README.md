@@ -1,73 +1,43 @@
-# Welcome to your Lovable project
+# Christophe Digital Twin — Asynchronous Presence System
 
-## Project info
+Landing page for **[regnau.lt](https://regnau.lt)**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+> I can't be everywhere, but my digital twin can. Write to
+> `ask.christophe@regnau.lt` and get a personalised answer — in my voice — within minutes.
 
-## How can I edit this code?
+## What this repo is
 
-There are several ways of editing your application.
+The public front of the project: a static single-page site describing how the twin
+works, its use cases, and a contact form. The twin itself (email intake, response
+generation, voice, video) runs elsewhere and is not part of this repository.
 
-**Use Lovable**
+## Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- [Vite](https://vitejs.dev) + [React](https://react.dev) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com) + [shadcn/ui](https://ui.shadcn.com)
+- Contact form via [Formspree](https://formspree.io)
+- Deployed with GitHub Actions to GitHub Pages, custom domain `regnau.lt`
 
-Changes made via Lovable will be committed automatically to this repo.
+## Local development
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm ci
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build for production with `npm run build` — output goes to `dist/`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deployment
 
-**Use GitHub Codespaces**
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and
+publishes `dist/` to GitHub Pages. `public/CNAME` pins the custom domain.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Transparency
 
-## What technologies are used for this project?
+The digital twin is an AI system. Anyone interacting with it is told so, in line with
+Article 50 of the EU AI Act. Voice and video are synthetically generated with the
+explicit consent of the person they represent.
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© Christophe Regnault. All rights reserved.
